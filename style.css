@@ -1,0 +1,124 @@
+/* 
+    We assign a background color to our body tag
+*/
+body {
+    background-color: #9DB68C;
+}
+
+/* 
+    Get's rid of the margin and bullet points added by unordered lists.
+*/
+ul {
+    list-style-type: none; 
+    margin: 0;
+}
+
+/* 
+    This class is applied to the div that contains the entire site except for the title. Any other
+    parameters added here will affect it's children.
+*/
+.content {
+    background-color: #558C89;
+}
+
+/* 
+    A simple centered text class to add a text align of type center and avoid inline css.
+*/
+.ceteredText {
+    text-align: center;
+}
+
+/* 
+    Adds a padding of 5px to a certain element.
+*/
+.textPadding {
+    padding: 5px;
+}
+
+/* 
+    Adds a text decoration of type underline. Used in all of our title elements of each list.
+*/
+.textUnderline {
+    text-decoration: underline;
+}
+
+/* 
+    The class row indicates that we should use flexbox css to center around the elements. This creates our column layout.
+*/
+.row {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.listContent {
+    padding-left: 20px;
+}
+
+/* 
+    These elements indicate the personalized style that each of our three columns should have. We went for a 20% initial column and two columns of 40% each with different
+    background colors.
+*/
+div.columns:nth-of-type(1){
+    flex: 20%;
+    background: #ECECEA;
+    min-height: 500px;
+}
+div.columns:nth-of-type(2){
+    flex: 40%;
+    background:#74AFAD;
+    min-height: 500px;
+}
+div.columns:nth-of-type(3){
+    flex: 40%;
+    background:#6F8EB5;
+    min-height: 500px;
+}
+
+
+/* 
+Link styling pseudo classes for visited, active and hovering anchor tags
+*/
+a:visited {
+    color:blue;
+}
+
+a:active {
+    color: #f00;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+/* 
+Responsive media queries
+*/
+
+@media only screen and (max-width: 575px) {
+    .row {
+        flex-direction: column;
+    }
+
+    div.columns:nth-of-type(1){
+        width: 90%;
+        background: #ECECEA;
+        min-height: 300px;
+        margin: auto;
+        
+    }
+    div.columns:nth-of-type(2){
+        width: 90%;
+        background:#74AFAD;
+        min-height: 300px;
+        margin: auto;
+        
+    }
+    div.columns:nth-of-type(3){
+        width: 90%;
+        background:#6F8EB5;
+        min-height: 300px;
+        margin: auto;
+        
+    }
+}

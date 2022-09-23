@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Educational Experience</title>
+</head>
+<body>
+    <div class="ceteredText">
+        <h3>Resume of Sean Romanski</h3>
+        <h4>
+            37 Manor Drive, Glenmont NY 12077
+        </h4>
+        <h4>
+            (518) 217-1512 | Seamusromanski@gmail.com
+        </h4>
+    </div>
+    <div class="content">
+        <div class="ceteredText textPadding">
+            <h4>Educational Experience</h4>
+        </div>
+        <!--
+            This is the main part of our page and its a row styled with css flexbox that contains three columns one for direcitonal purposes
+            and the rest to illustrate the main content of the site.
+        -->
+        <div class="row">
+            <div class="columns" >
+                <h2>Other pages</h2>
+                <ul>
+                    <li><a href="work_experiences.html" target="_blank">Work Experiences</a></li>
+                    <li><a href="educational_experiences.html" target="_blank">Educational Experience</a></li>
+                    <li><a href="skills.html" target="_blank">Related Awards and Skills</a></li>
+                </ul>
+            </div>
+            <!--
+                Each of these columns has the same columns class which in turn has its variations for width and back ground color in the style css file
+            -->
+            <div class="columns">
+                <!--
+                    We've placed the content of each of these columns inside of an unordered list that does not show the bullets and has it's padding
+                    set by the class listContent. textUnderline class simply sets a text decoration on the title of each item.
+                -->
+                <ul>
+                    <li>
+                        <h4 class="textUnderline">University at Albany</h4>
+                        <div class="listContent">
+                            <h5>Degree anticipated 2024</h5>
+                            <a href="https://www.albany.edu/" target="_blank">University at Albany Site</a>
+                            <p>Bachelor of Science, Concentration in Informatics.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="columns">
+                <ul>
+                    <li>
+                        <h4 class="textUnderline">Hudson Valley Community College</h4>
+                        <div class="listContent">
+                            <h5>May 2018</h5>
+                            <a href="https://www.hvcc.edu/" target="_blank">Hudson Valley Community College Site</a>
+                            <p>Associates of Applied Science, Concentration Individual Studies.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--
+            A final div showing us an anchor tag so that people may email me. centeredText and textPadding classes simply add a center attribute and padding
+            to the element inside of the div.
+        -->
+        <div class="ceteredText textPadding">
+            <a href = "mailto: Seamusromanski@gmail.com">Email me!</a>
+        </div>
+    </div>
+</body>
+</html>
