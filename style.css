@@ -2,7 +2,8 @@
     We assign a background color to our body tag
 */
 body {
-    background-color: #9DB68C;
+    /*background-color: #9DB68C;*/
+    background-color: lightgray;
 }
 
 /* 
@@ -18,7 +19,9 @@ ul {
     parameters added here will affect it's children.
 */
 .content {
-    background-color: #558C89;
+    background-color: lightgray;
+    border-style: solid;
+    border-width: 1px;
 }
 
 /* 
@@ -63,16 +66,22 @@ div.columns:nth-of-type(1){
     flex: 20%;
     background: #ECECEA;
     min-height: 500px;
+    border-style: solid;
+    border-width: 1px;
 }
 div.columns:nth-of-type(2){
     flex: 40%;
-    background:#74AFAD;
+    background: #ECECEA;
     min-height: 500px;
+    border-style: solid;
+    border-width: 1px;
 }
 div.columns:nth-of-type(3){
     flex: 40%;
-    background:#6F8EB5;
+    background: #ECECEA;
     min-height: 500px;
+    border-style: solid;
+    border-width: 1px;
 }
 
 
@@ -105,20 +114,23 @@ Responsive media queries
         background: #ECECEA;
         min-height: 300px;
         margin: auto;
-        
+        border-style: solid;
+        border-width: 1px;
     }
     div.columns:nth-of-type(2){
         width: 90%;
-        background:#74AFAD;
+        background: #ECECEA;
         min-height: 300px;
         margin: auto;
-        
+        border-style: solid;
+        border-width: 1px;
     }
     div.columns:nth-of-type(3){
         width: 90%;
-        background:#6F8EB5;
+        background: #ECECEA;
         min-height: 300px;
         margin: auto;
-        
+        border-style: solid;
+        border-width: 1px;
     }
 }
