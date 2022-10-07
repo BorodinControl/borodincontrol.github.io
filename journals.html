@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Journal Entries</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <img src="banner.png" alt="Guy looking into book" width="300" height="100">
+        </div>
+    </div>
+    <div>
+        <h3>Sean Romankys Book Review and Journaling Corner</h3>
+    </div>
+    <div class="navigationBar">
+        <ul>
+            <li><a href="journals.html">Home</a></li>
+            <li><a href="review_entry_one.html">Book Review: The Last Heretic</a></li>
+            <li><a href="review_entry_two.html">Book Review: Prospero Burns</a></li>
+            <li><a href="review_entry_three.html">Book Review: Transpotting</a></li>
+            <li><button data-modal-target="#modal" id="subscribe">Subscribe</button></li>
+        </ul>
+    </div>
+    <!-- Article 1 -->
+    <div class='articleContainer'>
+        <div class="articleTitle">
+            <h4>Journal Entry 2</h4>
+        </div>
+        <div class='row'>
+            <div class='column'>
+                <div class='article_date'>
+                    9/10/2022
+                </div>
+            </div>
+            <div class='column'>
+                <div class='article_container'>
+                    <p class="multiline">
+                        My lone runs are becoming sparser, as the UAlbany Running Exchange has begun meeting again. It makes me happier to encounter some familiar faces and my running 
+                        intensity has increased, but as this group rarely does more than six miles together my total distance has taken a nosedive. Still, with some exceptions I have 
+                        continued to work out twice every weekday and once every weekend. This Saturday was spent in Colonie, so I have elected to give my route between my office and 
+                        the airport another shot. I have also decided to continue A Game of Thrones. Mostly, I have encountered a number of plot segments that are quite similar to those 
+                        in the TV show. However, I can rest assured in the knowledge that the writers for HBO are unlikely to botch these characters too much.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article 2 -->
+    <div class='articleContainer'>
+        <div class="articleTitle">
+            <h4>Journal Entry 1</h4>
+        </div>
+        <div class='row'>
+        <div class='column'>
+            <div class='article_date'>
+                8/24/2022
+            </div>
+        </div>
+        <div class='column'>
+            <div class='article_container'>
+                <p class="multiline">
+                    Today, I felt a bit out of sorts with the recent changes in lighting, and therefore, for my nightly run, I decided to attempt a new running route and a new 
+                    book to accompany it. I ran from my house, over the bridge and past the thruway, turning on various streets to bring my total distance up to 10.66 miles. 
+                    This route is quite enjoyable during the night, and surprisingly safe. I may even enjoy it during the winter. I decided on a change in books as well, 
+                    switching to A Game of Thrones. George RR. Martin is notorious for his story length, therefore although this is quite a time commitment. 
+                    I will probably break this up piecemeal with other books, as I have done with the Mahabharata. 
+                </p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="title">Hello there!</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            Please enter your email address to receive daily updates on my journaling and reviews!
+            <form>
+                <label for="emailInput">Enter your email:</label>
+                <input type="email" id="emailInput" required>
+                <button type="submit" id="submitEmail">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div id="overlay"></div>
+</body>
+</html>

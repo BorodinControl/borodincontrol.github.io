@@ -1,136 +1,207 @@
-/* 
-    We assign a background color to our body tag
-*/
-body {
-    /*background-color: #9DB68C;*/
-    background-color: lightgray;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    flex-direction: row;
 }
 
-/* 
-    Get's rid of the margin and bullet points added by unordered lists.
-*/
-ul {
-    list-style-type: none; 
+.navigationBar ul {
+    list-style-type: none;
     margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #dddddd;
+}
+  
+.navigationBar li {
+    float: left;
+}
+  
+.navigationBar li a {
+    display: block;
+    padding: 8px;
 }
 
-/* 
-    This class is applied to the div that contains the entire site except for the title. Any other
-    parameters added here will affect it's children.
-*/
-.content {
-    background-color: lightgray;
-    border-style: solid;
-    border-width: 1px;
-}
-
-/* 
-    A simple centered text class to add a text align of type center and avoid inline css.
-*/
-.ceteredText {
+.navigationBar li button {
+    margin-left: 30%;
+    background-color: darkcyan; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 32px;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor:pointer;
 }
 
-/* 
-    Adds a padding of 5px to a certain element.
-*/
-.textPadding {
-    padding: 5px;
+
+.multiline {
+    white-space: wrap;
 }
 
-/* 
-    Adds a text decoration of type underline. Used in all of our title elements of each list.
-*/
-.textUnderline {
-    text-decoration: underline;
+.article_date {
+    padding: 10px;
 }
 
-/* 
-    The class row indicates that we should use flexbox css to center around the elements. This creates our column layout.
+.article_container {
+    padding: 10px;
+    padding-right: 250px;
+    background-color: #EEEEEE;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.pageNavigationList {
+    padding: 10px;
+    list-style-type: none;
+    background-color: #dddddd;;
+}
+
+.mainFlexColumn ul li {
+    margin:0 0 10px 0;   
+}
+
+/*
+    Flexbox settings
 */
+
+.articleContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
 .row {
     display: flex;
     flex-direction: row;
-    padding: 20px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-.listContent {
-    padding-left: 20px;
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    font-size: 14px;
 }
 
-/* 
-    These elements indicate the personalized style that each of our three columns should have. We went for a 20% initial column and two columns of 40% each with different
-    background colors.
+div.column:nth-of-type(1){
+    flex: 15%;
+    min-height: 100px;
+}
+
+div.column:nth-of-type(2){
+    flex: 85%;
+    min-height: 100px;
+    padding: 0;
+}
+
+/*
+    Modal styles
 */
-div.columns:nth-of-type(1){
-    flex: 20%;
-    background: #ECECEA;
-    min-height: 500px;
-    border-style: solid;
-    border-width: 1px;
-}
-div.columns:nth-of-type(2){
-    flex: 40%;
-    background: #ECECEA;
-    min-height: 500px;
-    border-style: solid;
-    border-width: 1px;
-}
-div.columns:nth-of-type(3){
-    flex: 40%;
-    background: #ECECEA;
-    min-height: 500px;
-    border-style: solid;
-    border-width: 1px;
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 350px;
+    max-width: 80%;
 }
 
-
-/* 
-Link styling pseudo classes for visited, active and hovering anchor tags
-*/
-a:visited {
-    color:blue;
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
 }
 
-a:active {
-    color: #f00;
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
 }
 
-a:hover {
-    color: hotpink;
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
-/* 
-Responsive media queries
-*/
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 10px 15px;
+    margin-top: 10px;
+}
+
+.modal form {
+    margin: 20px 0 20px;
+}
+
+#submitEmail {
+    margin-top: 5%;
+    margin-left: 80%;
+}
+
+#overlay {
+    position: fixed;
+    transition: 200ms ease-in-out;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    pointer-events: all;
+    opacity: 1;
+}
 
 @media only screen and (max-width: 575px) {
-    .row {
-        flex-direction: column;
+    .article_container {
+        padding-right: 0px;
     }
 
-    div.columns:nth-of-type(1){
-        width: 90%;
-        background: #ECECEA;
-        min-height: 300px;
-        margin: auto;
-        border-style: solid;
-        border-width: 1px;
+    img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 90%;
+        margin: 20px auto;
     }
-    div.columns:nth-of-type(2){
-        width: 90%;
-        background: #ECECEA;
-        min-height: 300px;
-        margin: auto;
-        border-style: solid;
-        border-width: 1px;
+
+    .navigationBar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    div.columns:nth-of-type(3){
-        width: 90%;
-        background: #ECECEA;
-        min-height: 300px;
-        margin: auto;
-        border-style: solid;
-        border-width: 1px;
+
+    .navigationBar #subscribe {
+        margin-left: 0%;
     }
+}
+
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
 }
